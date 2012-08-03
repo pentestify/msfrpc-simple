@@ -27,6 +27,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  librex
   msfrpc-client
   pry
   rspec
