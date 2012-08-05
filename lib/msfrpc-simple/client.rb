@@ -2,6 +2,8 @@ $:.unshift(File.expand_path(File.dirname(__FILE__)))
 require 'msfrpc-client'
 require 'features/framework'
 require 'features/pro'
+require 'logger'
+require 'util'
 require 'pry'
 
 module Msf

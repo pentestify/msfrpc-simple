@@ -5,7 +5,7 @@ module Msf
         module Pro
 
           def start_report(options)
-            raise "Unimplemented"
+            raise "Not Implemented"
 =begin
             task = @rpc.call("pro.start_report", {
               'DS_REPORT_TYPE'            => options[:report_type],
@@ -34,7 +34,7 @@ module Msf
           end
 
           def start_discover(options)
-            raise "Unimplemented"
+            raise "Not Implemented"
 
             #task = @rpc.call("pro.start_discover", {
             #  'DS_WHITELIST_HOSTS'        => options[:whitelist],
@@ -45,7 +45,7 @@ module Msf
           end
 
           def start_bruteforce(options)
-            raise "Unimplemented"
+            raise "Not Implemented"
           end
 
         end
