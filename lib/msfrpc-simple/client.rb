@@ -2,8 +2,8 @@ $:.unshift(File.expand_path(File.dirname(__FILE__)))
 require 'msfrpc-client'
 require 'features/framework'
 require 'features/pro'
+require 'module_mapper'
 require 'logger'
-require 'util'
 require 'pry'
 
 module Msf
@@ -44,13 +44,6 @@ module Msf
           # Create a logger
           #
           @logger = Msf::RPC::Simple::Logger.new
-          
-          #
-          # Store the temp token for later use
-          #
-          #response = @rpc.call("auth.login",username, password)
-          #@token = response["token"]
-          #binding.pry
         end
 
         #

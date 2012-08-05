@@ -1,7 +1,3 @@
-$:.unshift(File.expand_path(File.dirname(__FILE__)))
-require 'msfrpc-client'
-
-
 module Msf
   module RPC
     module Simple

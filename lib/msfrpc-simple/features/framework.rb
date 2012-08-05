@@ -150,10 +150,10 @@ module Msf
 
 
           #
-          #
+          # This module runs a number of _login modules
           #
           def fw_bruteforce(options)
-
+            return "Not Implemented"
           end
 
         end
