@@ -41,16 +41,17 @@ describe "Msf" do
 
 
         it "runs a module and gives the output" do 
-          
           output = @client.execute_module_and_return_output({
             :module_name => "auxiliary/scanner/http/http_version", 
             :module_option_string => "RHOSTS www.google.com,THREADS 10"
           })
-
-          puts output
           output.should include "Auxiliary module execution completed"
         end
-
+        
+        it "runs a basic discover with framework modules" do 
+          output = @client.discover_host("www.google.com")          
+          output.should include "Auxiliary module execution completed"
+        end
       end
     end
   end
