@@ -36,7 +36,7 @@ module Msf
           #
           # Connect to the RPC daemon using the default r7 client
           #
-          @rpc = Msf::RPC::Client.new(user_opts)
+          @client = Msf::RPC::Client.new(user_opts)
 
           #
           # Create a logger
@@ -55,7 +55,7 @@ module Msf
         #  
         #
         def connected?
-          return true if @rpc.call("core.version")   
+          return true if @client.call("core.version")   
         end
       end
     end
