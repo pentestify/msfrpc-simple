@@ -4,8 +4,8 @@ require File.expand_path('../lib/msfrpc-simple/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["jcran"]
   gem.email         = ["jcran@pentestify.com"]
-  gem.description   = %q{Simple interface to Metasploit RPC}
-  gem.summary       = %q{Simple interface to Metasploit RPC}
+  gem.description   = %q{Simple wrapper for the Metasploit RPC API}
+  gem.summary       = %q{This library provides a simple-to-use wrapper for the Rapid7 Metasploit RPC API}
   gem.homepage      = "http://www.github.com/jcran/msfrpc-simple"
 
   gem.files         = `git ls-files`.split($\)
