@@ -7,7 +7,7 @@ module Msf
           def start_report(options)
             raise "Not Implemented"
 =begin
-            task = @rpc.call("pro.start_report", {
+            task = @client.call("pro.start_report", {
               'DS_REPORT_TYPE'            => options[:report_type],
               'DS_WHITELIST_HOSTS'        => options[:whitelist],
               'DS_BLACKLIST_HOSTS'        => options[:blacklist],
@@ -36,7 +36,7 @@ module Msf
           def start_discover(options)
             raise "Not Implemented"
 
-            #task = @rpc.call("pro.start_discover", {
+            #task = @client.call("pro.start_discover", {
             #  'DS_WHITELIST_HOSTS'        => options[:whitelist],
             #  'DS_BLACKLIST_HOSTS'        => options[:blacklist],
             #  'workspace'                 => options[:workspace],

@@ -20,7 +20,7 @@ module Msf
         # project - project name we want to use for this connection.
         #
         # Returns nothing.
-        def initialize(project="default", username, password, user_opts)
+        def initialize(project="default", username, password, user_opts=nil)
 
           #
           # Merge our project in, and set this as the project we'll
@@ -36,7 +36,7 @@ module Msf
           user_opts.merge!(conn_params)
           
           #
-          # Connect to the RPC daemon using the default r7 client
+          # Connect to the RPC daemon using the default client
           #
           @client = Msf::RPC::Client.new(user_opts)
 
