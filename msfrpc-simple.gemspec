@@ -16,6 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = Msf::RPC::Simple::VERSION
   
   gem.add_dependency("msfrpc-client")
-  gem.add_dependency("librex")
+  #gem.add_dependency("librex")
 
 end

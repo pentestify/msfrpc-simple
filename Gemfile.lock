@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    msfrpc-simple (0.0.3)
-      librex
+    msfrpc-simple (0.0.4)
       msfrpc-client
 
 GEM
