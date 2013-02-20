@@ -14,4 +14,8 @@ Gem::Specification.new do |gem|
   gem.name          = "msfrpc-simple"
   gem.require_paths = ["lib"]
   gem.version       = Msf::RPC::Simple::VERSION
+  
+  gem.add_dependency("msfrpc-client")
+  gem.add_dependency("librex")
+
 end

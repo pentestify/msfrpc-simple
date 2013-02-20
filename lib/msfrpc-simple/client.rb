@@ -4,7 +4,6 @@ require 'features/framework'
 require 'features/pro'
 require 'module_mapper'
 require 'logger'
-require 'pry'
 
 module Msf
   module RPC
@@ -20,7 +19,7 @@ module Msf
         # project - project name we want to use for this connection.
         #
         # Returns nothing.
-        def initialize(project="default", username, password, user_opts=nil)
+        def initialize(project="default", username, password, user_opts)
 
           #
           # Merge our project in, and set this as the project we'll
@@ -30,7 +29,7 @@ module Msf
             :project => project, 
             :port => 55553,
             :user => username, 
-            :pass => password 
+            :pass => password
           }
 
           user_opts.merge!(conn_params)
