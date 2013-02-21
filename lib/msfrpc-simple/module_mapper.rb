@@ -5,7 +5,7 @@ module Msf
           
           # Public: Get all discovery modules, given a host endpoint
           #
-          # This method may seem poorly abstracted but you must pass in an IP address
+          #  This method may seem poorly abstracted but you must pass in an IP address
           #  in order to compensate for the different ways that modules accept an
           #  endpoint. For example, scanners need an RHOSTS option, while most other 
           #  modules will accept a RHOST option.
