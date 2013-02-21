@@ -57,16 +57,16 @@ module Msf
           def bruteforce_range(range)
 
             module_list = [
-              #{:module_name => "auxiliary/scanner/ftp/ftp_login"}, 
-              #{:module_name => "auxiliary/scanner/http/http_login"}, 
-              #{:module_name => "auxiliary/scanner/smb/smb_login"}, 
-              #{:module_name => "auxiliary/scanner/mssql/mssql_login"}, 
-              #{:module_name => "auxiliary/scanner/mysql/mysql_login"}, 
-              #{:module_name => "auxiliary/scanner/pop3/pop3_login"}, 
-              #{:module_name => "auxiliary/scanner/smb/smb_login"}, 
-              #{:module_name => "auxiliary/scanner/snmp/snmp_login"}, 
+              {:module_name => "auxiliary/scanner/ftp/ftp_login"}, 
+              {:module_name => "auxiliary/scanner/http/http_login"}, 
+              {:module_name => "auxiliary/scanner/smb/smb_login"}, 
+              {:module_name => "auxiliary/scanner/mssql/mssql_login"}, 
+              {:module_name => "auxiliary/scanner/mysql/mysql_login"}, 
+              {:module_name => "auxiliary/scanner/pop3/pop3_login"}, 
+              {:module_name => "auxiliary/scanner/smb/smb_login"}, 
+              {:module_name => "auxiliary/scanner/snmp/snmp_login"}, 
               {:module_name => "auxiliary/scanner/ssh/ssh_login"}, 
-              #{:module_name => "auxiliary/scanner/telnet/telnet_login"}, 
+              {:module_name => "auxiliary/scanner/telnet/telnet_login"}, 
             ]
 
             output = ""
@@ -95,9 +95,6 @@ module Msf
           def execute_module_and_return_output(options)
             module_name = options[:module_name]
             module_option_string = options[:module_option_string]
-
-            puts "module: #{module_name}"
-            puts "options: #{module_option_string}"
 
             # split up the module name into type / name
             module_type = module_name.split("/").first
