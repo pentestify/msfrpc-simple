@@ -4,28 +4,11 @@ module Msf
       module Features 
         module Framework
 
-
-          def create_report
-
-            report_path = "/tmp/metasploit_#{rand(1000000)}.xml"
-
-            # Create the console and get its id
-            _send_command("db_export #{report_path}\n")
-
-            # Read and clean up the file
-            xml_string = File.open(report_path).read
-            File.delete(report_path)
-
-          xml_string
-          end
-
           #
           # This module runs a number of discovery modules
           #
-          def discover_host(host)
+          def discover_range(range)
 
-            #
-            # 
             # Other Potential options
             #  - auxiliary/scanner/smb/pipe_auditor
             #  - auxiliary/scanner/smb/pipe_dcerpc_auditor
