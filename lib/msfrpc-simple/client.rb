@@ -4,7 +4,6 @@ require 'features/framework'
 require 'features/pro'
 require 'module_mapper'
 require 'logger'
-require 'pry'
 
 module Msf
   module RPC
@@ -14,36 +13,43 @@ module Msf
         include Msf::RPC::Simple::Features::Framework
         include Msf::RPC::Simple::Features::Pro
 
+        attr_accessor :options
+
         # Public: Create a simple client object.
         #
         # opts - hash of options to include in our initial connection.
         # project - project name we want to use for this connection.
         #
         # Returns nothing.
-        def initialize(project="default", username, password, user_opts=nil)
+        def initialize(user_options)
+
+          # db username
+          # db password 
 
           #
           # Merge our project in, and set this as the project we'll
           # use going forward. 
           #
-          conn_params = { 
-            :project => project, 
-            :port => 55553,
-            :user => username, 
-            :pass => password 
+          @options = {
+            :project => user_options[:project] || "default", 
+            :port => user_options[:project] || 55553,
+            :user => user_options[:rpc_user], 
+            :pass => user_options[:rpc_pass], 
+            :db_user => user_options[:db_user],
+            :db_pass => user_options[:db_pass]
           }
-
-          user_opts.merge!(conn_params)
           
+          @options.merge!(user_options)
+
           #
           # Connect to the RPC daemon using the default client
           #
-          @client = Msf::RPC::Client.new(user_opts)
+          @client = Msf::RPC::Client.new(@options)
 
           #
           # Create a logger
           #
-          @logger = Msf::RPC::Simple::Logger.new
+          #@logger = Msf::RPC::Simple::Logger.new
         end
 
         #
